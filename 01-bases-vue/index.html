@@ -8,7 +8,13 @@
 <body>
 
     <div id="myApp">
-        <h1>Batman quotes</h1>
+        <h1>Batman quotes <small>{{ newQuote }}</small></h1>
+        <input 
+            v-model="newQuote" 
+            type="text" 
+            v-on:keypress="addQuote"/>
+
+        <hr />
             <ul style="list-style: none">
                 <li v-for="({quote, author}, index) in quotes">
                     <span>{{ index + 1 }} - {{ quote }}</span>
