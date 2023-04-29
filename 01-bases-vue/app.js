@@ -28,8 +28,6 @@ const quotes = [
   },
 ];
 
-console.log(quotes)
-
 const app = Vue.createApp({
   data() {
     return {
@@ -39,9 +37,11 @@ const app = Vue.createApp({
   },
 
   methods: {
-    addQuote( event ) {
-      console.log(this.newQuote)
-      console.log(event)
+    addQuote() {
+      // if(event.charCode !== 13 ) return
+      this.quotes.unshift({
+        quote: this.newQuote
+      })
     }
   },
 
