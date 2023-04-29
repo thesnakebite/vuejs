@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>VueJS Intro</title>
@@ -7,7 +7,13 @@
 </head>
 <body>
 
-    <div id="myApp" data-v-app>
+    <div id="myApp">
+        <h3>{{ quote }}</h3>
+        <blockquote>-{{ author }}</blockquote>
+
+        <button v-on:click="changeQuote">
+            Change Quote
+        </button>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

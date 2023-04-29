@@ -1,8 +1,30 @@
 const app = Vue.createApp({
-  template: `
-    <h1>Hola VueJS</h1>
-    <p>... soy thesnakebite dev 🤪</p>
-   `,
-});
+    data() {
+        return {
+            quote: "I'm Batman",
+            author: 'Bruce Wayne'
+        }
+    },
+
+    methods: {
+        changeQuote(){
+            console.log('Hola mundo')
+            this.author='John'
+            this.capitalize()
+        },
+
+        capitalize(){
+            this.quote = this.quote.toUpperCase()
+        }
+    },
+
+    watch: {
+
+    },
+
+    setup(props) {
+        
+    }
+})
 
 app.mount('#myApp')
