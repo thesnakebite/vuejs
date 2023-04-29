@@ -8,12 +8,20 @@
 <body>
 
     <div id="myApp">
-        <h3>{{ quote }}</h3>
-        <blockquote>-{{ author }}</blockquote>
+        <h1>Batman quotes</h1>
+            <ul style="list-style: none">
+                <li v-for="({quote, author}, index) in quotes">
+                    <span>{{ index + 1 }} - {{ quote }}</span>
+                    <blockquote>-{{ author }}</blockquote>
+                </li>
+                <!-- Desestructar desde la directiva v-for -->
+                <!-- <li v-for="{quote, author} in quotes">
+                    <span>{{ quote}}</span>
+                    <blockquote>-{{ author }}</blockquote>
+                </li> -->
+                
 
-        <button v-on:click="changeQuote">
-            Change Quote
-        </button>
+            </ul>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
