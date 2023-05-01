@@ -12,13 +12,20 @@
 
 <script>
     export default{
-        props: ['title'],
+        props: {
+            title: String,
+            start: {
+                type: Number,
+                default: 10
+                // required: true,
+            }
+        },
 
         name:'Counter',
          
         data() {
             return {
-                counter: 5
+                counter: this.start
             }
         },
 
