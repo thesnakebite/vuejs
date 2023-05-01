@@ -7,9 +7,10 @@
             <input v-model="question" type="text" placeholder="Hazme una pregunta">
             <p>Recuerda terminar con un signo de interrogación (?)</p>
 
-            <div>
+            <div v-if="isValidQuestion">
                 <h2>{{ question }}</h2>
-                <h1>{{ answer}}</h1>
+                <!-- Si: YES, No!: NO -->
+                <h1>{{ answer }}</h1>
             </div>
         </div>
     </div>
@@ -22,7 +23,8 @@
             return{
                 question: null,
                 answer: null,
-                img: null
+                img: null,
+                isValidQuestion: false,
             }
         },
 
@@ -33,14 +35,18 @@
                 const {answer, image} = await fetch('https://yesno.wtf/api')
                     .then(r => r.json())
 
-                    this.answer = answer
+                    this.answer = answer === 'yes' ? 'Si' : 'No!'
                     this.img = image
                 }
         },
 
         watch: {
             question(value, oldValue){
+                this.isValidQuestion = false
+
                 if(!value.includes('?')) return
+
+                this.isValidQuestion = true
                 // TODO: Realizar petición http
                 this.getAnswer()
             }
