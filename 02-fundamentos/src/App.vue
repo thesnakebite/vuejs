@@ -2,7 +2,7 @@
   <div>
     <img alt="Vue logo" src="./assets/logo.png">
 
-    <Counter :start="1" />
+    <Counter :start="10" />
 
   </div>
     
