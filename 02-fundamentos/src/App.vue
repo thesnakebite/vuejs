@@ -1,7 +1,10 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png">
+    <Counter title="Entraron"/>
+
     <Counter />
+
   </div>
     
 </template>
