@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Counter Component Debe ser identico al image 1`] = `
-<div class="buttons-container">
-  <h2>Counter</h2>
-  <p>10 <sup>2</sup> = 100</p><!-- <button v-on:click="getIncrease">+1</button> --><button>+1</button><button>-1</button>
-</div>
-`;
