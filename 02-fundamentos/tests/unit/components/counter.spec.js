@@ -3,7 +3,7 @@ import Counter from '@/components/Counter.vue'
 import { h } from 'vue'
 
 describe('Counter Component', () => {
-    let wrapper
+    let wrapper;
 
     beforeEach( () => {
         wrapper = shallowMount (Counter)
