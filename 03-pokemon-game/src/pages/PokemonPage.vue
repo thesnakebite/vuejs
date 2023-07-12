@@ -1,22 +1,24 @@
 <template>
-    <div>
-        <h1>¿Quién es este pokémon?</h1>
-            <PokemonPicture :pokemonId="3" :showPokemon="true"/>
-            <PokemonOptions/>
-    </div>
-    
+  <h1>¿Quién es este pokémon?</h1>
+  
+  <PokemonPicture :pokemonId="35" :showPokemon="true" />
+  <PokemonOptions />
+
+
 </template>
 
 <script>
-    import PokemonPicture from '@/components/PokemonPicture'
-    import PokemonOptions from '@/components/PokemonOptions'
+import PokemonPicture from '@/components/PokemonPicture'
+import PokemonOptions from '@/components/PokemonOptions'
 
-    export default {
-        components: {
-            PokemonPicture,
-            PokemonOptions,
-        },
-        
 
+export default {
+    name: 'PokemonPage',
+    
+    components: {
+        PokemonPicture,
+        PokemonOptions
     }
+
+}
 </script>

@@ -7,6 +7,7 @@
             <li>4</li>
         </ul>
     </div>
+  
 </template>
 
 <script>
@@ -15,14 +16,11 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
     /* Pokemon Options */
     ul {
         list-style-type: none;
-        margin: 20px 0 0 0;
-        padding: 0;
     }
-    
     li {
         background-color: white;
         border-radius: 5px;
@@ -40,5 +38,4 @@ export default {
         display: flex;
         justify-content: center;
     }
-
 </style>
