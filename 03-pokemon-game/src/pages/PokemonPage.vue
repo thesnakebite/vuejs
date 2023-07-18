@@ -5,8 +5,14 @@
   <div v-else>
     <h1>¿Quién es este pokémon?</h1>
   
-    <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
-    <PokemonOptions :pokemons="pokemonArr" @selectionPokemon="checkAnswer(1,2,3, $event) " />
+    <PokemonPicture 
+        :pokemonId="pokemon.id" 
+        :showPokemon="showPokemon" 
+    />
+    <PokemonOptions 
+        :pokemons="pokemonArr" 
+        @selectionPokemon="checkAnswer" 
+    />
 
     <template v-if="showAnswer">
       <h2 class="fade-in">{{ message }}</h2>
