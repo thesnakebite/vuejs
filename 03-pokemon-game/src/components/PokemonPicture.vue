@@ -28,9 +28,6 @@ export default {
             required: true,
             default: false
         }
-
-
-        
     },
 
     computed: {
