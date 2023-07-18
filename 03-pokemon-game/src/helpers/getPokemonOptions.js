@@ -1,13 +1,13 @@
 import pokemonApi from "@/api/pokemonApi"
 
 // Creamos un arreglo con los 650 pokemons
-const getPokemons = () => {
+export const getPokemons = () => {
     const pokemonsArr = Array.from( Array(650) )
 
     return pokemonsArr.map( ( _ , index) => index + 1 )
 }
 
-// Aqui tomamos el arrglo y lo mezclamos
+// Aqui tomamos el arreglo y lo mezclamos
 const getPokemonOptions = async () =>{
 
     const mixedPokemons = getPokemons().sort( () => Math.random() -0.5 )
@@ -18,7 +18,7 @@ const getPokemonOptions = async () =>{
 }
 
 // Mostramos los 4 primeros pokemons aleatorios
-const getPokemonsNames = async ( [a,b,c,d] = [] ) => {
+export const getPokemonsNames = async ( [a,b,c,d] = [] ) => {
     // const resp = await pokemonApi.get(`/1`)
     // console.log(resp.data.name, resp.data.id)
     const promiseArr = [
